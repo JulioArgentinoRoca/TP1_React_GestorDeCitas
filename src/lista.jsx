@@ -3,13 +3,11 @@ import Appointment from "./cita.jsx"
 function list(){
 
     return (
-        <div>
-            <h1>Lista</h1>
-
+        <div class="one-half column">
+            <h2>Administra tus citas</h2>
             < Appointment />
             < Appointment />
             < Appointment />
-               
         </div>
     )
 }

@@ -11,9 +11,14 @@ function App() {
   return (
     <>
       <h1>ADMINISTRADOR DE PACIENTES</h1>
-      < Formulario />
+      <div class="container">
+        <div class="row">
+          < Formulario />
+        
+          < Lista />
+        </div>
+      </div>
       
-      < Lista />
     </>
   )
 }
