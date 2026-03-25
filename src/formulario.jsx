@@ -2,7 +2,7 @@ function form(){
 
     return (
         <>
-            <div class="one-half column">
+            
             <h2>Crear mi Cita</h2>
             <form>
                 <label>Nombre Mascota</label>
@@ -17,7 +17,7 @@ function form(){
                 <textarea name="sintomas" class="u-full-width"></textarea>
                 <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
             </form>
-          </div>
+          
         </>
     )
 }
