@@ -1,4 +1,5 @@
 import Appointment from "./cita.jsx"
+import './lista.css'
 
 function list(){
 
@@ -15,7 +16,7 @@ function list(){
         },
         {
             pet: "Sifon",
-            owner: "Flecha",
+            owner: "Rigoberto IV de la mesa redonda",
             date: "2023-08-05",
             time: "09:24",
             syntoms: "Duerme mucho"

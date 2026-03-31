@@ -1,3 +1,5 @@
+import './cita.css'
+
 function appointment({pet, owner, date, time, syntoms}){
 
     return (

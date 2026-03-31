@@ -1,3 +1,5 @@
+import './formulario.css'
+
 function form(){
 
     return (
