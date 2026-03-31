@@ -1,12 +1,12 @@
-function appointment(){
+function appointment({pet, owner, date, time, syntoms}){
 
     return (
         <div class="cita">
-              <p>Mascota: <span>Nina</span></p>
-              <p>Dueño: <span>Martin</span></p>
-              <p>Fecha: <span>2021-08-05</span></p>
-              <p>Hora: <span>08:20</span></p>
-              <p>Sintomas: <span>Le duele la pierna</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
+              <p>Mascota: <span>{pet}</span></p>
+              <p>Dueño: <span>{owner}</span></p>
+              <p>Fecha: <span>{date}</span></p>
+              <p>Hora: <span>{time}</span></p>
+              <p>Sintomas: <span>{syntoms}</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
         </div>
     )
 }
