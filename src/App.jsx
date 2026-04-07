@@ -32,6 +32,16 @@ function App() {
 
     ])
 
+    const addAppointment = (appointment) =>{
+      setAppointments([...appointmentsObjectList, {
+        pet: appointment.pet,
+        owner: appointment.owner,
+        date: appointment.date,
+        time: appointment.time,
+        syntoms: appointment.syntoms
+      }])
+
+    }
 
     const deleteAppointment = (indexToDelete) => {
       let appointments=[];
@@ -45,6 +55,7 @@ function App() {
       setAppointments(appointments)
     }
 
+    
 
 
   return (
@@ -58,7 +69,7 @@ function App() {
           <div class="container">
             <div class="row">
               <div class="one-half column">
-                < Formulario />
+                < Formulario addAppointment={addAppointment}/>
               </div>
               
               <div class="one-half column">

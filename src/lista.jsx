@@ -5,8 +5,6 @@ import './lista.css'
 function list(props){
     //appointment
 
-    
-
 
     const [indexToDelete, setDeleteIndex] = useState()
 
@@ -23,9 +21,6 @@ function list(props){
     )
      
 
-    
-
-    
 
     return (
 
