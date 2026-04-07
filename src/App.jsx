@@ -7,7 +7,46 @@ import './App.css'
 
 
 function App() {
-  
+  const [appointmentsObjectList, setAppointments] = useState([
+      {
+        pet: "Nina",
+        owner: "Martin",
+        date: "2021-08-05",
+        time: "08:20",
+        syntoms: "Le duele la pierna"
+      },
+      {
+        pet: "Sifon",
+        owner: "Rigoberto IV de la mesa redonda",
+        date: "2023-08-05",
+        time: "09:24",
+        syntoms: "Duerme mucho"
+      },
+      {
+        pet: "Floki",
+        owner: "Ari",
+        date: "2023-08-05",
+        time: "16:15",
+        syntoms: "No está comiendo"
+      }
+
+    ])
+
+
+    const deleteAppointment = (indexToDelete) => {
+      let appointments=[];
+
+      for(let i=0; i<appointmentsObjectList.length; i++){
+        if(i != indexToDelete){
+          appointments.push(appointmentsObjectList[i])
+        }
+      }
+
+      setAppointments(appointments)
+    }
+
+
+
   return (
     <>
       
@@ -23,7 +62,7 @@ function App() {
               </div>
               
               <div class="one-half column">
-                < Lista />
+                < Lista appointments={appointmentsObjectList} deleteAppointment={deleteAppointment}/>
               </div>
               
             </div>

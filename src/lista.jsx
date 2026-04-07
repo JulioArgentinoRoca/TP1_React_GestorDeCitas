@@ -1,42 +1,31 @@
 import Appointment from "./cita.jsx"
+import {useEffect, useState} from "react"
 import './lista.css'
 
-function list(){
+function list(props){
+    //appointment
+
+    
 
 
-    let appointmentList=[]
+    const [indexToDelete, setDeleteIndex] = useState()
 
-    let appointmentsObjectList=[
-        {
-            pet: "Nina",
-            owner: "Martin",
-            date: "2021-08-05",
-            time: "08:20",
-            syntoms: "Le duele la pierna"
-        },
-        {
-            pet: "Sifon",
-            owner: "Rigoberto IV de la mesa redonda",
-            date: "2023-08-05",
-            time: "09:24",
-            syntoms: "Duerme mucho"
-        },
-        {
-            pet: "Floki",
-            owner: "Ari",
-            date: "2023-08-05",
-            time: "16:15",
-            syntoms: "No está comiendo"
-        }
+    const appointmentList=props.appointments.map((appointment, index) =>
+        < Appointment 
+        pet={appointment.pet} 
+        owner={appointment.owner} 
+        date={appointment.date} 
+        time={appointment.time} 
+        syntoms={appointment.syntoms} 
+        myIndex={index} 
+        deletMev2={props.deleteAppointment}
+        />
+    )
+     
 
-    ]
+    
 
-    for(let i=0; i<appointmentsObjectList.length; i++){
-        appointmentList.push(
-            < Appointment pet={appointmentsObjectList[i].pet} owner={appointmentsObjectList[i].owner} date={appointmentsObjectList[i].date} time={appointmentsObjectList[i].time} syntoms={appointmentsObjectList[i].syntoms} />
-        )
-    }
-
+    
 
     return (
 
